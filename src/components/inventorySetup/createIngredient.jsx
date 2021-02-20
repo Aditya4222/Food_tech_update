@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import Breadcrumb from "../../layout/breadcrumb";
 import { Container, Row,CardHeader, Col, Card,CardBody,Button,CardFooter,Form,Table,FormGroup,Label,Input,InputGroup,InputGroupAddon,InputGroupText} from "reactstrap";
-
+import GoBack from "../menu_setup/menuComponents/GoBack";
 import FormControl from 'react-bootstrap/FormControl'
 import Dropdown from 'react-bootstrap/Dropdown'
 
@@ -12,46 +12,50 @@ const Create_Ingredient = (props) => {
     <Fragment>
 <Container fluid={true}>
 <Breadcrumb parent="Home" title=" Create Ingredient" />
-
-    
-
-
-        {/* TOP PROFILE */}
+{/* TOP PROFILE */}
         <Container>
-       
-              
-              <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}}className="f-w-100"> 
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+       <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}}className="f-w-100"> 
+              <i><GoBack goToPath="/app/ingredient_Sub_Recipes" /></i>
            Create Ingredient</h2>
             <div>
-             
-             
-                  </div>
-                 
-                 
-       
+                  </div>       
                     <Row>
           <Col xl="12">
           <Card>
               <Form className="form theme-form">
                 <CardBody>
                   <Row>
-                    <Col>
-                    <FormGroup className="row m-t-12 m-checkbox-inline mb-0 ">
-                        <Label className="col-sm-3 col-form-label">{"Ingrident Type"}</Label>
-                        
-                       
-                      <div className="radio radio-primary">
-                        <Input id="radioinline1" type="radio" name="radio1" value="option1"  defaultChecked />
-                        <Label className="mb-0" for="radioinline1">{Option}<span className="digits"> {"Ingredient"}</span></Label>
-                      </div>
-                      <div className="radio radio-primary">
-                        <Input id="radioinline2" type="radio" name="radio1" value="option1"  />
-                        <Label className="mb-0" for="radioinline2">{Option}<span className="digits"> {"Sub Recipe"}</span></Label>
-                      </div>
-                       
-               
-                      </FormGroup>
+                  <Col md={8} xs={12}>
+                  <FormGroup className="row">
+                  <label className="col-form-label col-sm-3 pt-0">
+                    {"Ingrident Type"}
+                  </label>
+                  <div className="radio radio-primary ml-4">
+                    <Input
+                      type="radio"
+                      name="radio1"
+                      id="radio1"
+                      value="option1"
+                      defaultChecked
+                    />
+                    <Label for="radio1">
+                      {Option} {"Ingredient"}
+                    </Label>
+                  </div>
+                  <div className="radio radio-primary ml-4">
+                    <Input
+                      type="radio"
+                      name="radio1"
+                      id="radio2"
+                      value="option1"
+                    />
+                    <Label for="radio2">
+                      {Option} {"Sub Recipe"}
+                    </Label>
+                  </div>
+                
+                </FormGroup>
+                  
                       <FormGroup className="row">
                         <Label className="col-sm-3 col-form-label">{"Name"}</Label>
                         <Col sm="9">

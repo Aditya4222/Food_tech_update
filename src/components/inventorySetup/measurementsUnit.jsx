@@ -4,7 +4,7 @@ import { Container, Row, Col, Card,CardBody,CardHeader,Button, Modal, ModalHeade
 import {Link } from "react-router-dom";
 import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
-
+import GoBack from "../menu_setup/menuComponents/GoBack";
 
 const MeasurementUnit = (props) => {
   const [modal, setModal] = useState(false);
@@ -19,12 +19,16 @@ const MeasurementUnit = (props) => {
 
         {/* TOP PROFILE */}
         <Container>
-       
-              
-                  <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}}className="f-w-100"> <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                  Measurement  Units</h2>
-                
-                  <Button color="success" style={{display:"inline-block",float: 'right' }} onClick={toggle}><i class="fa fa-plus " aria-hidden="true"></i> 
+        <Row>
+          <Col md={4} className="d-flex flex-row">
+         <h3 style={{padding:"10px", color:"#a927f9", display:"inline-block"}}> <i><GoBack goToPath="/app/inventory-Setting" /></i>
+                  Measurement  Units</h3>
+          </Col>
+          <Col md={8} className="d-flex flex-row justify-content-end">
+          
+
+          <Button className="btn-pill my-auto mx-md-3" color="success" style={{display:"inline-block",float: 'right' }} onClick={toggle}>
+          <i class="fa fa-plus " aria-hidden="true"></i> 
                   Add Measurement Unit</Button>
                  
                     <Modal isOpen={modal} toggle={toggle} >
@@ -44,9 +48,11 @@ const MeasurementUnit = (props) => {
                         <Button color="success" onClick={toggle}>{'Save'}</Button>
                         </ModalFooter>
                     </Modal>
+          </Col>
+        </Row>
        
                     <Row>
-          <Col xl="12">
+          <Col xl="12" >
             <Card>
               <CardHeader>
               <h5>{"Name"}</h5>    

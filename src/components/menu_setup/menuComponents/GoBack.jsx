@@ -13,6 +13,7 @@ const GoBack = ({ goToPath }) => {
         className="mr-2 px-2"
         style={{ height: "fit-content" }}
         onClick={goBackHandler}
+       
       >
         <i className="fa fa-arrow-left fa-2x"></i>
       </Button>

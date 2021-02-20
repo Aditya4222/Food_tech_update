@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import Breadcrumb from "../../layout/breadcrumb";
 import { Container, Row, Col, Card,CardBody,CardHeader,Button ,InputGroupText} from "reactstrap";
 import DropdownButton from 'react-bootstrap/DropdownButton'
-
+import GoBack from "../menu_setup/menuComponents/GoBack";
 import Dropdown from 'react-bootstrap/Dropdown'
 import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import Form from 'react-bootstrap/Form'
@@ -23,68 +23,84 @@ const Ingredint_Sub_Recipes = (props) => {
 
         {/* TOP PROFILE */}
         <Container>
-       
-              
-              <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}}className="f-w-100"> <i class="fa fa-arrow-left" aria-hidden="true"></i>
-               Ingredint & Sub Recipes </h2>
 
-               <Form  style={{float: 'right' ,paddingRight:"10px",paddingTop:"5px" }}>
+
+        <Row>
+          <Col md={4} className="d-flex flex-row">
+            <GoBack goToPath="/app/inventory-Home"/>
+            <h3 style={{color:"#a927f9"}}> Ingredint & Sub Recipes</h3>
+          </Col>
+          <Col md={8} className="d-flex flex-row justify-content-end">
+          
+            <DropdownButton   className="btn-pill my-auto mx-md-2" style={{display:"inline-block",float: 'right'}} id="dropdown-basic-button" title="All Caegories">
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </DropdownButton>
+              <DropdownButton  className="btn-pill my-auto mx-md-2"  style={{display:"inline-block",float: 'right' }} id="dropdown-basic-button" title="All Types">
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </DropdownButton>
+
+              <Form   className="btn-pill my-auto mx-md-2" style={{float: 'right' }}>
                <InputGroup>
               <FormControl type="text" placeholder="Search" className="mr" />
               <InputGroupAddon addonType="append"><InputGroupText>{<Search />}</InputGroupText></InputGroupAddon>
               </InputGroup>
               </Form>
-                 <DropdownButton  style={{display:"inline-block",float: 'right', paddingRight:"10px" ,paddingTop:"5px"}} id="dropdown-basic-button" title="All Caegories">
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-              </DropdownButton>
+      
+          </Col>
+        </Row>
 
-              <DropdownButton  style={{display:"inline-block",float: 'right', paddingRight:"10px" ,paddingTop:"5px" }} id="dropdown-basic-button" title="All Types">
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-              </DropdownButton>
+ <br></br>
 
+        <Row>
+          <Col md={4} className="d-flex flex-row">
+        <h5 style={{color:"#a927f9"}}> Ingredint & Sub Recipes</h5>
+          </Col>
+          <Col md={8} className="d-flex flex-row justify-content-end">
+
+
+       
+          <Link to ="/app/Create_Ingredient" >
+          <Button
+           type="button"
+           color="success"
+            onClick={toggle}>
+            <i class="fa fa-plus " aria-hidden="true"></i> 
+              {"Add ingridents"}
+            </Button>
+            </Link>
             
-                 
-              <div>
-              <h5  style={{padding:"15px", color:"#a927f9", display:"inline-block"}}className="f-w-100"> 
-               Ingredint & Sub Recipes </h5>
-               <Link to="/app/Upload_Ingridents">
-               <Button size="sm" className="btn-air "color="primary" style={{display:"inline-block",float: 'right' }} onClick={toggle}><i class="fa fa-upload" aria-hidden="true"></i> 
-                    Upload Ingredients</Button>
-                    </Link>
-
-                    <Link to ="/app/Create_Ingredient" >
-                  <Button  size="sm" color="success" style={{display:"inline-block",float: 'right' }} onClick={toggle}><i class="fa fa-plus " aria-hidden="true"></i>
-                  Add Ingredients
-                  </Button>
-                  </Link>
-                  </div>
-                    <Row>
-          <Col xl="12">
+            <Link to="/app/Upload_Ingridents">
+            <Button
+           type="button"
+           color="primary"
+            onClick={toggle}>
+             <i class="fa fa-upload" aria-hidden="true"></i>
+              {"Upload Ingridents"}
+            </Button>
+            </Link>
+            
+      
+          </Col>
+        </Row>
+        <br></br>
+          <Row>
+          <Col md={12} xs={12} className="d-flex flex-column">
             <Card>
               <CardBody>
              <div>
-                       
-                      
-                                
-                    <h3>No Ingriendt Found</h3>
+                   <h3>No Ingriendt Found</h3>
                     <p>You don't have any ingredients yet.To start ,click Add new Ingredient</p>
                     <Link to ="/app/Create_Ingredient" >
                     <Button color="success" onClick={toggle}><i class="fa fa-plus " aria-hidden="true"></i>
                     Add Ingredients
                      </Button>
-                     </Link>
-                       
-                         
-                            
-                        
+                     </Link>                 
                       </div>
-                    
-                     
-              </CardBody>
+                    </CardBody>
             </Card>
           </Col>
         </Row>

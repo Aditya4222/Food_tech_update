@@ -38,7 +38,7 @@ const Menu = () => {
               type="button"
               onClick={() => history.push("/app/settings/menuSetup/uploadMenu")}
               className="btn-pill my-auto"
-              color="light"
+              color="#a927f9"
               style={{ height: "fit-content" }}
             >
               <i className="fa fa-upload"></i>&nbsp;

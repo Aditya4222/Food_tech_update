@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import Breadcrumb from "../../layout/breadcrumb";
 import { Container, Row, Col, Card,CardBody,CardHeader,Button, Modal, ModalHeader, ModalFooter, ModalBody } from "reactstrap";
 import {Link } from "react-router-dom";
-
+import GoBack from "../menu_setup/menuComponents/GoBack";
 import FormControl from 'react-bootstrap/FormControl'
 
 
@@ -25,11 +25,11 @@ const Upload_Ingridents= (props) => {
                          
                                 
                                     <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}} className="f-w-100">
-                                     <i class="fa fa-arrow-left" aria-hidden="true"></i>Upload Ingridents</h2>
+                                    <i><GoBack goToPath="/app/ingredient_Sub_Recipes" /></i>Upload Ingridents</h2>
                                     
                           
                                       <Row style={{textAlign :"center"}}>
-                            <Col style={{textAlign :"center"}} xl="12">
+                            <Col style={{textAlign :"center"}} md={12} xs={12}>
                               <Card style={{textAlign :"center"}}>
                             
                                 <CardBody  style={{textAlign :"center"}} >

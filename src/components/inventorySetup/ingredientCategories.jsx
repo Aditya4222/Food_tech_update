@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import Breadcrumb from "../../layout/breadcrumb";
 import { Container, Row, Col, Card,CardBody,CardHeader,Button, Modal, ModalHeader, ModalFooter, ModalBody } from "reactstrap";
 import {Link } from "react-router-dom";
-
+import GoBack from "../menu_setup/menuComponents/GoBack";
 
 import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
 
@@ -21,18 +21,22 @@ const IngredientCategories = (props) => {
 
         {/* TOP PROFILE */}
         <Container>
-       
-              
-                  <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}}className="f-w-100"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Ingredient Categories </h2>
-                  
-                
-                  <Button color="success" style={{display:"inline-block",float: 'right' }} onClick={toggle}><i class="fa fa-plus " aria-hidden="true"></i> 
-                  Add Ingredint Category</Button>
+        <Row>
+          <Col md={4} className="d-flex flex-row">
+         <h4 style={{padding:"10px", color:"#a927f9", display:"inline-block"}}> <i><GoBack goToPath="/app/inventory-Setting" /></i>
+    Ingredient Categories </h4>
+          </Col>
+          <Col md={8} className="d-flex flex-row justify-content-end">
+          
+
+          <Button className="btn-pill my-auto mx-md-3" color="success" style={{display:"inline-block",float: 'right' }} onClick={toggle}>
+          <i class="fa fa-plus " aria-hidden="true"></i> 
+          Add Ingredint Category </Button>
                  
                     <Modal isOpen={modal} toggle={toggle} >
                         <ModalHeader    toggle={toggle}>{'Ingredint Category'}</ModalHeader>
                         <ModalBody>
-                        <h5  style={{color:"#a927f9"}} > Ingredint Category Name </h5>
+                        <h5  style={{color:"#a927f9"}} >  Ingredient Unit Name </h5>
                         <InputGroup  size="lg">
                      
                      
@@ -46,9 +50,11 @@ const IngredientCategories = (props) => {
                         <Button color="success" onClick={toggle}>{'Save'}</Button>
                         </ModalFooter>
                     </Modal>
+          </Col>
+        </Row>
        
                     <Row>
-          <Col xl="12">
+          <Col md={12} xs={12} className="d-flex flex-column">
             <Card>
               <CardHeader>
               <h5>{"Name"}</h5>    

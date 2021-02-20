@@ -4,6 +4,8 @@ import { Container, Row, Col, Card, Button } from "reactstrap";
 import SettingBtn from "../foodTech-settings-button/SettingButton";
 import Navbar from 'react-bootstrap/Navbar'
 import {Link } from "react-router-dom";
+import GoBack from "../menu_setup/menuComponents/GoBack";
+
 
 
 const inventoryHome = () => {
@@ -11,21 +13,13 @@ const inventoryHome = () => {
     <Fragment>
     <Container fluid={true}>
         <Breadcrumb parent="Home" title="InventoryHome" />
-        {/* TOP PROFILE */}
-      {/* <Container fluid={true} style={{padding:"15px"}}  > */}
-      
-        {/* <Container>
-  <Navbar style={{backgroundColor: "white"  }}   expand="lg" variant="light">
-    <Navbar.Brand href="#" style={{ color:"#a927f9"}}> <i color="info" class="fa fa-caret-right" aria-hidden="true"></i>Inventory </Navbar.Brand>
-  </Navbar>
-</Container> */}
 
 
         {/* TOP PROFILE */}
         <Container>
         
-              
-                  <h2  style={{padding:"15px", color:"#a927f9"}}className="f-w-100"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Inventory </h2>
+       
+                  <h2  style={{padding:"15px", color:"#a927f9"}}className="f-w-100"> <i> <GoBack goToPath="/app/settings" /></i>Inventory  </h2>
                 
        
         </Container>

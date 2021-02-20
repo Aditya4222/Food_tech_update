@@ -3,7 +3,7 @@ import Breadcrumb from "../../layout/breadcrumb";
 import { Container, Row, Col, Card,CardBody,CardHeader,Button, Modal, ModalHeader, ModalFooter, ModalBody,InputGroupText } from "reactstrap";
 import {Link } from "react-router-dom";
 import {Search } from 'react-feather';
-
+import GoBack from "../menu_setup/menuComponents/GoBack";
 import FormControl from 'react-bootstrap/FormControl'
 
 
@@ -26,11 +26,11 @@ const Create_Finished_Good = (props) => {
                          
                                 
                                     <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}} className="f-w-100">
-                                     <i class="fa fa-arrow-left" aria-hidden="true"></i>Create Finished Goods</h2>
+                                   <i><GoBack goToPath="/app/inventory-Home" /></i>Create Finished Goods</h2>
                                     
                           
                                       <Row style={{textAlign :"center"}}>
-                            <Col style={{textAlign :"center"}} xl="12">
+                            <Col style={{textAlign :"center"}}  md={12} xs={12}>
                               <Card style={{textAlign :"center"}}>
                             
                                 <CardBody  style={{textAlign :"center", padding:"100px"}} >

@@ -3,6 +3,7 @@ import Breadcrumb from "../../layout/breadcrumb";
 import { Container, Row, Col, Card, Button } from "reactstrap";
 import SettingBtn from "../foodTech-settings-button/SettingButton";
 import Navbar from 'react-bootstrap/Navbar'
+import GoBack from "../menu_setup/menuComponents/GoBack";
 import {Link } from "react-router-dom";
 const inventorySetting = () => {
   return (
@@ -15,7 +16,8 @@ const inventorySetting = () => {
         <Container>
         
               
-                  <h2  style={{padding:"15px", color:"#a927f9"}}className="f-w-100"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Inventory Settings</h2>
+                  <h2  style={{padding:"15px", color:"#a927f9"}}className="f-w-100"> <i><GoBack goToPath="/app/inventory-Home" /></i>
+                  Inventory Settings</h2>
                 
        
         </Container>
