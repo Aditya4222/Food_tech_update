@@ -26,7 +26,7 @@ const Create_Finished_Good = (props) => {
                          
                                 
                                     <h2  style={{padding:"15px", color:"#a927f9", display:"inline-block"}} className="f-w-100">
-                                   <i><GoBack goToPath="/app/inventory-Home" /></i>Create Finished Goods</h2>
+                                   <i><GoBack goToPath="/app/Adding_Finished_Group" /></i>Create Finished Goods</h2>
                                     
                           
                                       <Row style={{textAlign :"center"}}>

@@ -249,6 +249,10 @@ import Create_Finished_Good from "../components/inventorySetup/finishedGoods";
 // inventory  Create_Finished_Good
 import Upload_Ingridents from "../components/inventorySetup/uploadIngredients";
 
+// inventory Adding_Finished_Group
+import  Adding_Finished_Group from"../components/inventorySetup/addingfinishedgood";
+
+
 export const routes = [
   { path: "/dashboard/default", Component: Default },
   { path: "/dashboard", Component: Ecommerce },
@@ -448,6 +452,9 @@ export const routes = [
    
    // inventory  Upload_Ingridents
    { path :"/app/Upload_Ingridents",Component:Upload_Ingridents},
+
+   // inventory  Adding_Finished_Group
+   { path :"/app/Adding_Finished_Group",Component:Adding_Finished_Group},
    ];
 
 

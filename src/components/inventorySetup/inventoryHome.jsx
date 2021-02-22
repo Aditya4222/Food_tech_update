@@ -46,7 +46,7 @@ const inventoryHome = () => {
               </Link>
             </Col>
             <Col lg={3} md={4} sm={12}>
-            <Link to ="/app/Create_Finished_Good">
+            <Link to ="/app/Adding_Finished_Group">
               <Card>
                 <SettingBtn
                   icon="fa fa-truck fa-2x m-b-10"
