@@ -223,34 +223,19 @@ import MenuSetupHome from "../components/menu_setup/menu";
 import UploadMenu from "../components/menu_setup/UploadMenu";
 import AddNewMenuItem from "../components/menu_setup/AddNewMenuItem";
 
-
-
-// inventory-Setting-page
+// Inventory Setup
 import InventorySetting from "../components/inventorySetup/inventorySetting";
-
-// inventory-Home-page
 import InventoryHome from "../components/inventorySetup/inventoryHome";
-
-// inventory Ingriendt Categories
 import IngredientCategories from "../components/inventorySetup/ingredientCategories";
-
-// inventory Ingriendt Categories
 import MeasurementUnit from "../components/inventorySetup/measurementsUnit";
-
-// inventory Ingrident Sub Recipes
 import Ingredint_Sub_Recipes from "../components/inventorySetup/ingredient&SubRecipes";
-
-// inventory Create_Ingredient
 import Create_Ingredient from "../components/inventorySetup/createIngredient";
-
-// inventory  Create_Finished_Good
 import Create_Finished_Good from "../components/inventorySetup/finishedGoods";
-
-// inventory  Create_Finished_Good
 import Upload_Ingridents from "../components/inventorySetup/uploadIngredients";
+import  Adding_Finished_Group from "../components/inventorySetup/addingfinishedgood";
+import Sub_Recipes from "../components/inventorySetup/subrecipes";
 
-// inventory Adding_Finished_Group
-import  Adding_Finished_Group from"../components/inventorySetup/addingfinishedgood";
+
 
 
 export const routes = [
@@ -455,6 +440,10 @@ export const routes = [
 
    // inventory  Adding_Finished_Group
    { path :"/app/Adding_Finished_Group",Component:Adding_Finished_Group},
+
+   // inventory  Adding_Finished_Group
+   { path :"/app/Sub_Recipes",Component:Sub_Recipes},
+ 
    ];
 
 

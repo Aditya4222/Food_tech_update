@@ -4,10 +4,14 @@ import { Container, Row,CardHeader, Col, Card,CardBody,Button,CardFooter,Form,Ta
 import GoBack from "../menu_setup/menuComponents/GoBack";
 import FormControl from 'react-bootstrap/FormControl'
 import Dropdown from 'react-bootstrap/Dropdown'
+import {Link } from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
 
 const Create_Ingredient = (props) => {
                     const [modal, setModal] = useState(false);
                     const toggle = () => setModal(!modal);
+                    const history = useHistory();
   return (
     <Fragment>
 <Container fluid={true}>
@@ -43,15 +47,18 @@ const Create_Ingredient = (props) => {
                     </Label>
                   </div>
                   <div className="radio radio-primary ml-4">
+                 
                     <Input
                       type="radio"
                       name="radio1"
                       id="radio2"
-                      value="option1"
+                      value="option"
+                      onClick={() => history.push("/app/Sub_Recipes")}
                     />
                     <Label for="radio2">
                       {Option} {"Sub Recipe"}
                     </Label>
+               
                   </div>
                 
                 </FormGroup>
